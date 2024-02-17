@@ -1,10 +1,28 @@
-.button-normal {
+.app-button-normal {
     padding: 10px, 16px, 10px, 16px;
     border-radius: 6px;
     gap: 8px;
-    color: black !important;
+    background-color: black !important;
 }
 
-// .button-outline {
+.app-button-outline {
+    padding: 10px, 16px, 10px, 16px;
+    border-radius: 6px;
+    gap: 8px;
+    color: $primary !important;
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+}
 
-// }
+.app-dropdown {
+    // padding: 10px, 16px, 10px, 16px;
+    border-radius: 6px;
+    // gap: 8px;
+    // border: 1px black;
+    
+    background-color: #E5E8EF !important;
+}
+
+.nav-link {
+    display: inline !important;
+}

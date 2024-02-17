@@ -16,23 +16,34 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Buy</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('shopping-list')"
-            >Shopping List</a
+        <!-- <li class="nav-item">
+          <a class="nav-link"
+            >Sell [Soon]</a
           >
-        </li>
+        </li> -->
       </ul>
       <ul class="navbar-nav navbar-right">
-        <li class="dropdown" appDropdown>
-          <a class="nav-link dropdown-toggle" href="#">Dropdown</a>
+        <li class="dropdown text-center app-dropdown pe-auto" appDropdown>
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center pe-auto"
+            >{{ username }}</a
+          >
           <div class="dropdown-menu dropdown-menu-end">
-            <a class="dropdown-item" href="#">Save Data</a>
-            <a class="dropdown-item" href="#">Fetch Data</a>
+            <a class="dropdown-item">Portfolio</a>
+            <a class="dropdown-item">Open orders</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sign-in"
+            ><button class="btn btn-primary app-button-outline" type="button">
+              Sign in
+            </button></a
+          >
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<div style="height: 1px; background-color: #dee2e6; width: 100%"></div>
