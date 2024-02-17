@@ -1,0 +1,623 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\contracts\\AllowedList.sol": {
+      "lastModificationDate": 1708188369628,
+      "contentHash": "d90f4ea5efff9774b4519953c0c95f21",
+      "sourceName": "contracts/AllowedList.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+        "./IAllowedList.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "AllowedList"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\contracts\\IAllowedList.sol": {
+      "lastModificationDate": 1708188369612,
+      "contentHash": "773178ee8038a78ad4c0fd2343fe64fd",
+      "sourceName": "contracts/IAllowedList.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "IAllowedList"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol": {
+      "lastModificationDate": 1708188612159,
+      "contentHash": "6a4b611a83035a19370ecd7eb445d4fc",
+      "sourceName": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PausableUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1708188612156,
+      "contentHash": "a70d53f7e468306c02c529ecaa1d59c5",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1708188610423,
+      "contentHash": "b6dfb72ff1fd764f725ec4db364b1b20",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
+      "lastModificationDate": 1708188612058,
+      "contentHash": "b0970a564d121abf9adfff8d1a01eb16",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.2"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1708188610278,
+      "contentHash": "c30c805386fda8a42ff515da963d3a95",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol": {
+      "lastModificationDate": 1708188611043,
+      "contentHash": "a7a59a8d3ad24a7b40ba5f34f0c1d47f",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20Upgradeable.sol",
+        "./extensions/IERC20MetadataUpgradeable.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Upgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC20\\IERC20Upgradeable.sol": {
+      "lastModificationDate": 1708188611843,
+      "contentHash": "9a9398a7dbda9d014f04d5eb0fb581fd",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Upgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\IERC20MetadataUpgradeable.sol": {
+      "lastModificationDate": 1708188611809,
+      "contentHash": "9efcd5467a7f0bf533910ee8a267adb2",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20MetadataUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC20\\utils\\SafeERC20Upgradeable.sol": {
+      "lastModificationDate": 1708188612228,
+      "contentHash": "f6d59fee2d6fafaea5a33717dfba1260",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20Upgradeable.sol",
+        "../extensions/IERC20PermitUpgradeable.sol",
+        "../../../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20Upgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\IERC20PermitUpgradeable.sol": {
+      "lastModificationDate": 1708188611830,
+      "contentHash": "d95d71f4a9c75f46e6ab7fc92b6f9bac",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/IERC20PermitUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20PermitUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\contracts\\TOK.sol": {
+      "lastModificationDate": 1708188369628,
+      "contentHash": "08849e80f66cdc6c70beee9dbf0403c6",
+      "sourceName": "contracts/TOK.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "TOK"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\contracts\\EquityToken.sol": {
+      "lastModificationDate": 1708188369628,
+      "contentHash": "cbda1557805a8f0f9841cc8046bba51a",
+      "sourceName": "contracts/EquityToken.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+        "./IAllowedList.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "EquityToken"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\CountersUpgradeable.sol": {
+      "lastModificationDate": 1708188610427,
+      "contentHash": "2e908c762a799baea365e68a50500e2c",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "CountersUpgradeable"
+      ]
+    },
+    "C:\\Users\\Lenovo\\Documents\\SIRA_contract3\\contracts\\StableCoin.sol": {
+      "lastModificationDate": 1708188369612,
+      "contentHash": "4f299837b6084881cc7a7433bdc28597",
+      "sourceName": "contracts/StableCoin.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "StableCoin"
+      ]
+    }
+  }
+}
