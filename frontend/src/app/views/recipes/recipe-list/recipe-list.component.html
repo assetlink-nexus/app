@@ -1,0 +1,18 @@
+<div class="row justify-content-center align-items-center g-2">
+  <div class="col-12">
+    <div class="row justify-content-center align-items-center">
+      <div class="col">
+        <button class="btn btn-primary button-normal w-100">Place offer</button>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center mt-3">
+      <div class="col"></div>
+    </div>
+  </div>
+  <div class="col-12">
+    <app-recipe-item
+      *ngFor="let elem of recipes"
+      [recipe]="elem"></app-recipe-item>
+  </div>
+</div>
