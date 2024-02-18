@@ -7,11 +7,8 @@ async function deployContracts() {
   const [owner, otherAccount] = await ethers.getSigners();
 
   const StableCoin = await ethers.getContractFactory("StableCoin");
-<<<<<<< HEAD
-=======
   const VaultCoin = await ethers.getContractFactory("Vault");
 
->>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   const AllowedList = await ethers.getContractFactory("AllowedList");
   const EquityToken = await ethers.getContractFactory(
     "EquityToken"
@@ -24,10 +21,6 @@ async function deployContracts() {
     ["StableCoin", "PL"],
     { initializer: "initialize"}
 );
-<<<<<<< HEAD
-  const allowedList = await upgrades.deployProxy(AllowedList, {
-    initializer: "initialize"});
-=======
 
 const vaultCoin = await upgrades.deployProxy(
   VaultCoin,
@@ -37,23 +30,15 @@ const vaultCoin = await upgrades.deployProxy(
   const allowedList = await upgrades.deployProxy(AllowedList, {
     initializer: "initialize"});
 
->>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   const equityToken = await upgrades.deployProxy(
     EquityToken,
     ["Huta Julia", "HJ", "URI",allowedList.address],
     { initializer: "initialize"}
   );
-<<<<<<< HEAD
-  const tok = await upgrades.deployProxy(TOK, [stableCoin.address], {
-    initializer: "initialize"});
-
-  return { allowedList, stableCoin, equityToken, owner, tok, otherAccount };
-=======
   const tok = await upgrades.deployProxy(TOK, [stableCoin.address,vaultCoin.address], {
     initializer: "initialize"});
 
   return { allowedList, stableCoin, equityToken, owner, tok, otherAccount,vaultCoin  };
->>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
 }
 
 
@@ -128,9 +113,6 @@ describe("EquityToken", function () {
       );
     });
   });
-<<<<<<< HEAD
-
-=======
   describe("Base flow with borrow", function () {
     it("Should positively go through the base scenario", async function () {
       const { allowedList, equityToken, stableCoin, owner, tok , vaultCoin} =
@@ -158,7 +140,6 @@ describe("EquityToken", function () {
       );
     });
   });
->>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   //Base flow
   describe("Base flow two addresses", function () {
     it("Should positively go through the base scenario", async function () {

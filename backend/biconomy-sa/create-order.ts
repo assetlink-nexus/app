@@ -10,6 +10,8 @@ import { privateKeyToAccount } from "viem/accounts";
 import { polygonMumbai } from "viem/chains";
 import { createSmartAccountClient } from "@biconomy/account";
 
+
+const TokContractABI = require("../../chain/artifacts/contracts/TOK.json").abi;
 export const createAccountAndMintNft = async () => {
   // ----- 1. Generate EOA from private key
   const account = privateKeyToAccount(`0x${"b3d192521ddc8b77cd442df971a944e193322f8580f72238d07afbbedf0973fb"}`);
@@ -31,9 +33,9 @@ export const createAccountAndMintNft = async () => {
   console.log("SA Address", saAddress);
 
   // ------ 3. Generate transaction data
-  const nftAddress = "0x1758f42Af7026fBbB559Dc60EcE0De3ef81f665e";
+  const TOKAddress = "0x76786F56133C4B2173512C935C5d1688ca92B140";
   const parsedAbi = parseAbi(["function safeMint(address _to)"]);
-  const nftData = encodeFunctionData({
+  const TOKData = encodeFunctionData({
     abi: parsedAbi,
     functionName: "safeMint",
     args: [saAddress as Hex],
@@ -41,8 +43,8 @@ export const createAccountAndMintNft = async () => {
 
   // ------ 4. Send transaction
   const { waitForTxHash } = await smartAccount.sendTransaction({
-    to: nftAddress,
-    data: nftData,
+    to: TOKAddress,
+    data: TOKData,
   });
 
   const { transactionHash } = await waitForTxHash();
