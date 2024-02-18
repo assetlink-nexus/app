@@ -1,9 +1,13 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const { ethers } = require('ethers');
+// const {getTokenDetails } = require ("C:/Users/Lenovo/Documents/app/backend/get-tokens.js") 
+
 
 const app = express();
-const port = 3000;
+const port = 3001; // Change the port number
+
 
 
 app.use(bodyParser.json());
@@ -17,16 +21,6 @@ const responses = {
     messageResponse: { message: "Error" }, // Należy dostosować
 };
 
-app.get("/getTokens", (req, res) => {
-    const tokens = [
-        { tokenName: "TokenA", value: "123" },
-        { tokenName: "TokenB", value: "456" },
-        { tokenName: "TokenC", value: "789" },
-    ];
-
-    res.json(tokens);
-});
-
 app.post("/createOrder", (req, res) => {
     const authToken = req.headers["x-auth-token"];
 
@@ -39,11 +33,12 @@ app.post("/createOrder", (req, res) => {
     res.status(200).json(responses.tokenEnvelope);
 });
 
+
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json(responses.messageResponse); // Server error
 });
 
 app.listen(port, () => {
-    console.log(`Aplikacja nasłuchuje na http://localhost:${port}`);
+    console.log(`Application listening at http://localhost:${port}`);
 });
