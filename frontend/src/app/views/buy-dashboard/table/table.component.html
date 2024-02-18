@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Token name</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let token of tokens">
+      <td>
+        <span class="badge bg-primary">{{ token.name }}</span>
+      </td>
+      <td>{{ token.amount | number }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-sm"
+          (click)="openOrderBook(token)">
+          Order Book
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          (click)="placeOffer(token)">
+          Place Offer
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
