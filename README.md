@@ -3,6 +3,11 @@ AssetLink Nexus
 
 Welcome to **AssetLink Nexus**, the pioneering solution for the first tokenized company in Poland. This initiative aims to redefine financial asset management and user experience, marking a significant leap forward from traditional systems like those used by PKO BP.
 
+Presentation
+--------
+
+You can get access to presentation about the full vision of the product [presentation (https://www.figma.com/proto/gRFkcxdyFsIekZPf2HXt9G/DegenHack?page-id=39%3A4144&type=design&node-id=62-4145&viewport=103%2C-262%2C0.18&t=a6FTSYLVA0IRPTdM-1&scaling=contain&starting-point-node-id=62%3A4145&mode=design)][here]:  
+
 Overview
 --------
 
