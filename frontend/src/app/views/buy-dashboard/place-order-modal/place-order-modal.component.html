@@ -1,0 +1,26 @@
+<div class="modal fade" id="placeOrderModal" tabindex="-1" aria-labelledby="placeOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="placeOrderModalLabel">Place Offer - {{token?.name}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="priceInput" class="form-label">Price</label>
+              <input type="number" class="form-control" id="priceInput" name="price" [(ngModel)]="price">
+            </div>
+            <div class="mb-3">
+              <label for="amountInput" class="form-label">Amount</label>
+              <input type="number" name="amount" class="form-control" id="amountInput" [(ngModel)]="amount">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
