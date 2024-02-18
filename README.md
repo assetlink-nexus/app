@@ -62,4 +62,4 @@
 
 <hr />
 
-<p>This project is not just a submission for the Degen Hack but also a step towards improving the SIRA system from PKO BP. We are excited to lead the way in Poland's financial sector with AssetLink Nexus.</p>P
+<p>This project is not just a submission for the Degen Hack but also a step towards improving the SIRA system from PKO BP. We are excited to lead the way in Poland's financial sector with AssetLink Nexus.</p>
