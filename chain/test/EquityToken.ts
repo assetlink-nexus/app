@@ -7,6 +7,11 @@ async function deployContracts() {
   const [owner, otherAccount] = await ethers.getSigners();
 
   const StableCoin = await ethers.getContractFactory("StableCoin");
+<<<<<<< HEAD
+=======
+  const VaultCoin = await ethers.getContractFactory("Vault");
+
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   const AllowedList = await ethers.getContractFactory("AllowedList");
   const EquityToken = await ethers.getContractFactory(
     "EquityToken"
@@ -19,17 +24,36 @@ async function deployContracts() {
     ["StableCoin", "PL"],
     { initializer: "initialize"}
 );
+<<<<<<< HEAD
   const allowedList = await upgrades.deployProxy(AllowedList, {
     initializer: "initialize"});
+=======
+
+const vaultCoin = await upgrades.deployProxy(
+  VaultCoin,
+  [stableCoin.address]
+  // { initializer: "initialize"}
+);
+  const allowedList = await upgrades.deployProxy(AllowedList, {
+    initializer: "initialize"});
+
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   const equityToken = await upgrades.deployProxy(
     EquityToken,
     ["Huta Julia", "HJ", "URI",allowedList.address],
     { initializer: "initialize"}
   );
+<<<<<<< HEAD
   const tok = await upgrades.deployProxy(TOK, [stableCoin.address], {
     initializer: "initialize"});
 
   return { allowedList, stableCoin, equityToken, owner, tok, otherAccount };
+=======
+  const tok = await upgrades.deployProxy(TOK, [stableCoin.address,vaultCoin.address], {
+    initializer: "initialize"});
+
+  return { allowedList, stableCoin, equityToken, owner, tok, otherAccount,vaultCoin  };
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
 }
 
 
@@ -104,7 +128,37 @@ describe("EquityToken", function () {
       );
     });
   });
+<<<<<<< HEAD
 
+=======
+  describe("Base flow with borrow", function () {
+    it("Should positively go through the base scenario", async function () {
+      const { allowedList, equityToken, stableCoin, owner, tok , vaultCoin} =
+        await loadFixture(deployContracts);
+      await allowedList.addToAllowedList(owner.address);
+      await equityToken.creatItem(owner.address, 1000);
+      await stableCoin.approve(tok.address, 10);
+      await stableCoin.transfer(owner.address, 1000);
+      await allowedList.addToAllowedList(tok.address);
+      await equityToken.approve(tok.address, 10);
+
+      await tok.createOrder(1, equityToken.address, 1);
+      await tok.createOrder(1, equityToken.address, 1);
+
+      await vaultCoin.borrow(1);
+      await stableCoin.approve(vaultCoin.address, 1);
+      await vaultCoin.repay(1);
+
+      await tok.depositEquityToken(0, 1);
+      await tok.lockTransaction(0, false);
+      await tok.transact(0);
+
+      expect(await equityToken.balanceOf(owner.address)).to.equal(
+        ethers.BigNumber.from(1000)
+      );
+    });
+  });
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   //Base flow
   describe("Base flow two addresses", function () {
     it("Should positively go through the base scenario", async function () {

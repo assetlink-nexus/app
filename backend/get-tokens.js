@@ -1,6 +1,12 @@
+const express = require("express");
+const cors = require('cors');
 const { ethers } = require('ethers');
 
+const app = express();
+const port = 3000;
 
+app.use(express.json());
+app.use(cors());
 // Assuming all tokens have the same ABI because they're ERC20
 const erc20ABI = [
     // Minimal ABI to interact with ERC20 tokens
@@ -39,7 +45,21 @@ async function getTokenDetails(tokenAddresses) {
     return tokenDetails;
 }
 
-
-getTokenDetails(tokenAddresses)
-    .then(details => console.log(details))
+app.get("/getTokens", async (req, res) => {
+    // Use getTokenDetails here
+    getTokenDetails(tokenAddresses)
+    .then(details => {
+        console.log(details); // Log details to console
+        res.json(details); // Send details back to client
+    })
     .catch(error => console.error(error));
+    
+});
+
+app.listen(port, () => {
+    console.log(`Application listening at http://localhost:${port}`);
+});
+
+
+
+    module.exports = { getTokenDetails };

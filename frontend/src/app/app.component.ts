@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'model_webapp';
-  loadedFeature = 'recipe';
+  title = 'asset_link_nexus_app';
+  loadedFeature = 'buy';
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;

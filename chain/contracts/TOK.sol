@@ -6,6 +6,7 @@ import {SafeERC20Upgradeable} from "@openzeppelin/contracts-upgradeable/token/ER
 import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
+import "./IVault.sol";
 
 contract TOK is PausableUpgradeable, OwnableUpgradeable {
     using SafeERC20Upgradeable for IERC20Upgradeable;
@@ -14,6 +15,7 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
     uint256 private constant TOKEN = 1;
     uint256 private constant ORDER = 2;
     IERC20Upgradeable private coinToken;
+    IVault private coinVault;
 
     enum State {
         Created,
@@ -65,6 +67,7 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
 
     Order[] private orders;
     mapping(address => uint256) private stableCoinBalance;
+    mapping(address => uint256) private stableCoinShares;
     mapping(address => uint256) private equityTokenOwnerShipAmount;
     mapping(uint256 => address) private orderToOwner;
 
@@ -188,11 +191,12 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
         return equityTokenOwnerShipAmount[ownerAddress];
     }
 
-    function initialize(IERC20Upgradeable _coinAddress) public initializer {
+    function initialize(IERC20Upgradeable _coinAddress, IVault _coinVault) public initializer {
         __Ownable_init();
         coinToken = _coinAddress;
+        coinVault = _coinVault;
     }
-
+ 
     function changeCoinTokenAddress(IERC20Upgradeable _coinAddress) public onlyOwner {
         coinToken = _coinAddress;
     }
@@ -280,8 +284,14 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
             stableCoinBalance[orderOwner] >= packageAmountPrice,
             "TOK: insufficient balance"
         );
+        require(
+            coinVault.withdraw(stableCoinShares[orderOwner]),
+            "TOK: Vault cannot cover transaction"
+        );
         stableCoinBalance[orderOwner] = stableCoinBalance[orderOwner] - packageAmountPrice;
         orders[_orderId].currentState = State.Removed;
+
+
         coinToken.safeTransfer(
             orderOwner,
             packageAmountPrice
@@ -398,6 +408,10 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
     {
         address newOwner = orderToOwner[_orderId];
         require(
+            coinVault.withdraw(stableCoinShares[newOwner]),
+            "TOK: Vault cannot cover transaction"
+        );
+        require(
             stableCoinBalance[newOwner] >= orders[_orderId].pricePerToken,
             "TOK: insufficient StableCoin balance"
         );
@@ -435,6 +449,7 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
             orders[_orderId].equityTokenAmount = 0;
         }
         //TOK -> Buyer
+        // coinVault.
         IERC20Upgradeable(orders[_orderId].tokenAddress).safeTransfer(
             newOwner,
             orders[_orderId].equityTokenAmount
@@ -467,13 +482,20 @@ contract TOK is PausableUpgradeable, OwnableUpgradeable {
     }
 
     function deposit(IERC20Upgradeable _stableCoin, uint256 _amount) internal notPaused {
-        stableCoinBalance[msg.sender] = stableCoinBalance[msg.sender] + _amount;
 
         _stableCoin.safeTransferFrom(
             msg.sender,
             address(this),
             _amount
         );
+        _stableCoin.approve(address(coinVault), _amount);
+        // coinToken.approve(coinVault, _amount);
+        uint shares = coinVault.deposit(_amount);
+
+        stableCoinBalance[msg.sender] = stableCoinBalance[msg.sender] + _amount;
+
+        stableCoinShares[msg.sender] = stableCoinShares[msg.sender] + shares;
+        
     }
 
     function depositEquityToken(uint256 _orderId, uint256 _amount)

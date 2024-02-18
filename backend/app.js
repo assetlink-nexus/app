@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { ethers } = require('ethers');
+// const {getTokenDetails } = require ("C:/Users/Lenovo/Documents/app/backend/get-tokens.js") 
 
 
 const app = express();
@@ -19,16 +20,6 @@ const responses = {
     },
     messageResponse: { message: "Error" }, // Należy dostosować
 };
-
-// app.get("/getTokens", (req, res) => {
-//     const tokens = [
-//         { tokenName: "TokenA", totalSupply: "123" },
-//         { tokenName: "TokenB", value: "456" },
-//         { tokenName: "TokenC", value: "789" },
-//     ];
-
-//     res.json(tokens);
-// });
 
 app.post("/createOrder", (req, res) => {
     const authToken = req.headers["x-auth-token"];

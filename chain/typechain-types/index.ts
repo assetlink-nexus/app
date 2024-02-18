@@ -28,7 +28,17 @@ export type { EquityToken } from "./contracts/EquityToken";
 export { EquityToken__factory } from "./factories/contracts/EquityToken__factory";
 export type { IAllowedList } from "./contracts/IAllowedList";
 export { IAllowedList__factory } from "./factories/contracts/IAllowedList__factory";
+<<<<<<< HEAD
+=======
+export type { IVault } from "./contracts/IVault";
+export { IVault__factory } from "./factories/contracts/IVault__factory";
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
 export type { StableCoin } from "./contracts/StableCoin";
 export { StableCoin__factory } from "./factories/contracts/StableCoin__factory";
 export type { TOK } from "./contracts/TOK";
 export { TOK__factory } from "./factories/contracts/TOK__factory";
+<<<<<<< HEAD
+=======
+export type { Vault } from "./contracts/Vault";
+export { Vault__factory } from "./factories/contracts/Vault__factory";
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db

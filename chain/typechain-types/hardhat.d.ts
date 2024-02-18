@@ -57,6 +57,13 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IAllowedList__factory>;
     getContractFactory(
+<<<<<<< HEAD
+=======
+      name: "IVault",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IVault__factory>;
+    getContractFactory(
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       name: "StableCoin",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.StableCoin__factory>;
@@ -64,6 +71,13 @@ declare module "hardhat/types/runtime" {
       name: "TOK",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TOK__factory>;
+<<<<<<< HEAD
+=======
+    getContractFactory(
+      name: "Vault",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Vault__factory>;
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
 
     getContractAt(
       name: "OwnableUpgradeable",
@@ -121,6 +135,14 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IAllowedList>;
     getContractAt(
+<<<<<<< HEAD
+=======
+      name: "IVault",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IVault>;
+    getContractAt(
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       name: "StableCoin",
       address: string,
       signer?: ethers.Signer
@@ -130,6 +152,14 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.TOK>;
+<<<<<<< HEAD
+=======
+    getContractAt(
+      name: "Vault",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Vault>;
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
 
     // default types
     getContractFactory(

@@ -4,5 +4,12 @@
 export { AllowedList__factory } from "./AllowedList__factory";
 export { EquityToken__factory } from "./EquityToken__factory";
 export { IAllowedList__factory } from "./IAllowedList__factory";
+<<<<<<< HEAD
 export { StableCoin__factory } from "./StableCoin__factory";
 export { TOK__factory } from "./TOK__factory";
+=======
+export { IVault__factory } from "./IVault__factory";
+export { StableCoin__factory } from "./StableCoin__factory";
+export { TOK__factory } from "./TOK__factory";
+export { Vault__factory } from "./Vault__factory";
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db

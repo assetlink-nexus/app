@@ -39,7 +39,11 @@ export interface TOKInterface extends utils.Interface {
     "getOrderOwner(uint256)": FunctionFragment;
     "getOrders(uint256)": FunctionFragment;
     "getStableCoinBalance(address)": FunctionFragment;
+<<<<<<< HEAD
     "initialize(address)": FunctionFragment;
+=======
+    "initialize(address,address)": FunctionFragment;
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
     "lockTransaction(uint256,bool)": FunctionFragment;
     "owner()": FunctionFragment;
     "pause()": FunctionFragment;
@@ -129,7 +133,11 @@ export interface TOKInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "initialize",
+<<<<<<< HEAD
     values: [PromiseOrValue<string>]
+=======
+    values: [PromiseOrValue<string>, PromiseOrValue<string>]
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
   ): string;
   encodeFunctionData(
     functionFragment: "lockTransaction",
@@ -545,6 +553,10 @@ export interface TOK extends BaseContract {
 
     initialize(
       _coinAddress: PromiseOrValue<string>,
+<<<<<<< HEAD
+=======
+      _coinVault: PromiseOrValue<string>,
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
 
@@ -670,6 +682,10 @@ export interface TOK extends BaseContract {
 
   initialize(
     _coinAddress: PromiseOrValue<string>,
+<<<<<<< HEAD
+=======
+    _coinVault: PromiseOrValue<string>,
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
@@ -795,6 +811,10 @@ export interface TOK extends BaseContract {
 
     initialize(
       _coinAddress: PromiseOrValue<string>,
+<<<<<<< HEAD
+=======
+      _coinVault: PromiseOrValue<string>,
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -1040,6 +1060,10 @@ export interface TOK extends BaseContract {
 
     initialize(
       _coinAddress: PromiseOrValue<string>,
+<<<<<<< HEAD
+=======
+      _coinVault: PromiseOrValue<string>,
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
 
@@ -1156,6 +1180,10 @@ export interface TOK extends BaseContract {
 
     initialize(
       _coinAddress: PromiseOrValue<string>,
+<<<<<<< HEAD
+=======
+      _coinVault: PromiseOrValue<string>,
+>>>>>>> 1692cf02865171e08829b9ed2aa4cdb199b059db
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
 
