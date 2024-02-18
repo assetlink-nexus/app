@@ -52,6 +52,17 @@ Competition and Use Cases
 *   Integration with Ethereum for enhanced security.
 *   Liquid staking for feeless stock trading.
 
+
+Proposed changes
+-------
+During the hackathon we identified large scope for contract improvements, during the discovery we started planning an more efficient way to archive business goals for example:
+
+Create offer variant A:
+![Create offer A](createA.jpg "Create offer A")
+
+Approve offer for variant A:
+![Approve offer A](approveA.jpg "Approve offer A")
+
 Contact
 -------
 
