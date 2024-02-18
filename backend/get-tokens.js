@@ -99,7 +99,42 @@ app.post('/login', async (req, res) => {
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
   });
+
+app.post('/createOrder', async (req, res) => {
+    const { secretKey } = req.body;
   
+    // Validate the secret key
+    if (secretKey !== process.env.EXPECTED_SECRET_KEY) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+  
+    try {
+      const transactionHash = await createAccountAndMintNft();
+      res.json({ success: true, transactionHash });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+});
+  
+app.post("/createOrder", (req, res) => {
+    const authToken = req.headers["x-auth-token"];
+
+    if (!authToken) {
+        return res.status(403).json("Unauthorized"); // Authorization error
+    }
+
+    // Tutaj logika weryfikacji tokena i pobierania tokenów
+    // Na potrzeby przykładu zwrócimy sukces bez rzeczywistej weryfikacji
+    res.status(200).json(responses.tokenEnvelope);
+});
+
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json(responses.messageResponse); // Server error
+});
+
 
 app.listen(port, () => {
     console.log(`Application listening at http://localhost:${port}`);
