@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require('cors');
 const { ethers } = require('ethers');
+const { _price, _tokenAddress, _tokenAmount } = require('../backend/get-token.js');
+
 
 const app = express();
 const port = 3000;
@@ -142,4 +144,5 @@ app.listen(port, () => {
 
 
 
-    module.exports = { getTokenDetails };
+module.exports = { _price, _tokenAddress, _tokenAmount };
+
