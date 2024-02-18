@@ -11,21 +11,29 @@
       <td>
         <span class="badge bg-primary">{{ token.name }}</span>
       </td>
-      <td>{{ token.amount | number }}</td>
+      <td>{{ token.totalSupply | number }}</td>
       <td>
         <button
           type="button"
-          class="btn btn-outline-primary btn-sm"
+          class="btn btn-primary app-button-outline btn-sm"
           (click)="openOrderBook(token)">
           Order Book
         </button>
         <button
           type="button"
-          class="btn btn-primary btn-sm"
-          (click)="placeOffer(token)">
+          class="btn btn-primary app-button-normal btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#placeOrderModal"
+          (click)="openPlaceOfferModal(token)">
           Place Offer
         </button>
+
+        <!-- PlaceOrderModalComponent -->
       </td>
     </tr>
   </tbody>
 </table>
+
+<app-place-order-modal [token]="selectedToken"></app-place-order-modal>
+
+<div style="height: 200px;"></div>

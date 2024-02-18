@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './views/footer/footer.component';
 import { TableComponent } from './views/buy-dashboard/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PlaceOrderModalComponent } from './views/buy-dashboard/place-order-modal/place-order-modal.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BuyDashboardComponent,
     FooterComponent,
     TableComponent,
+    PlaceOrderModalComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],

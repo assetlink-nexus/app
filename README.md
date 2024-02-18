@@ -1,65 +1,78 @@
-<h1>AssetLink Nexus</h1>
+AssetLink Nexus
+===============
 
-<p>Welcome to <strong>AssetLink Nexus</strong>, the pioneering solution for the first tokenized company in Poland. This initiative aims to redefine financial asset management and user experience, marking a significant leap forward from traditional systems like those used by PKO BP.</p>
+Welcome to **AssetLink Nexus**, the pioneering solution for the first tokenized company in Poland. This initiative aims to redefine financial asset management and user experience, marking a significant leap forward from traditional systems like those used by PKO BP.
 
-<h2>Overview</h2>
+Presentation
+--------
 
-<p>AssetLink Nexus introduces a novel approach to asset management, optimizing the use of funds and enhancing user experiences through blockchain technology.</p>
+You can get access to presentation about the full vision of the product [here](https://www.figma.com/proto/gRFkcxdyFsIekZPf2HXt9G/DegenHack?page-id=39%3A4144&type=design&node-id=62-4145&viewport=103%2C-262%2C0.18&t=a6FTSYLVA0IRPTdM-1&scaling=contain&starting-point-node-id=62%3A4145&mode=design):  
 
-<h2>Problem</h2>
+Overview
+--------
 
-<p>The current PKO BP system locks in funds that could otherwise be productive, leading to inefficiencies and lost revenue opportunities.</p>
+AssetLink Nexus introduces a novel approach to asset management, optimizing the use of funds and enhancing user experiences through blockchain technology.
 
-<h2>Solution</h2>
+Problem
+-------
 
-<p>AssetLink Nexus proposes a three-step improvement process:
-1. <strong>Liquid Pool</strong>: Utilizes smart contracts for comprehensive asset management.
-2. <strong>Overnight Funds</strong>: Ensures locked-in funds are productive, generating revenue.
-3. <strong>Enhanced User Experience</strong>: Offers cost-free transactions, boosting client satisfaction.</p>
+The current PKO BP system locks in funds that could otherwise be productive, leading to inefficiencies and lost revenue opportunities.
 
-<h2>Benefits</h2>
+Solution
+--------
 
-<ul>
-<li>Reduced need for fund locking.</li>
-<li>Productive use of funds with real overnight rates.</li>
-<li>Improved user experience through cost-free trades.</li>
-</ul>
+AssetLink Nexus proposes a three-step improvement process: 1. **Liquid Pool**: Utilizes smart contracts for comprehensive asset management. 2. **Overnight Funds**: Ensures locked-in funds are productive, generating revenue. 3. **Enhanced User Experience**: Offers cost-free transactions, boosting client satisfaction.
 
-<h2>Tokenization Impact</h2>
+Benefits
+--------
 
-<ul>
-<li>Aims for 20% asset tokenization, enhancing market coverage for IPOs.</li>
-<li>Forefront of tokenization in Poland.</li>
-</ul>
+*   Reduced need for fund locking.
+*   Productive use of funds with real overnight rates.
+*   Improved user experience through cost-free trades.
 
-<h2>Roadmap</h2>
+Tokenization Impact
+-------------------
 
-<ul>
-<li>[x] Vault – Liquid pool for multiple bids.</li>
-<li>[x] First-come, first-served bid fulfillment.</li>
-<li>[ ] Development of Flash Loans.</li>
-<li>[ ] Liquidity Provision for cash flow assets.</li>
-</ul>
+*   Aims for 20% asset tokenization, enhancing market coverage for IPOs.
+*   Forefront of tokenization in Poland.
 
-<h2>Market Potential</h2>
+Roadmap
+-------
 
-<ul>
-<li>Targeting a significant share of the 1.128 billion PLN market.</li>
-<li>Leverage first-mover advantage for market dominance.</li>
-</ul>
+*   [x] Vault – Liquid pool for multiple bids.
+*   [x] First-come, first-served bid fulfillment.
+*   [ ] Development of Flash Loans.
+*   [ ] Liquidity Provision for cash flow assets.
 
-<h2>Competition and Use Cases</h2>
+Market Potential
+----------------
 
-<ul>
-<li>Unique deployment of smart contracts at scale.</li>
-<li>Integration with Ethereum for enhanced security.</li>
-<li>Liquid staking for feeless stock trading.</li>
-</ul>
+*   Targeting a significant share of the 1.128 billion PLN market.
+*   Leverage first-mover advantage for market dominance.
 
-<h2>Contact</h2>
+Competition and Use Cases
+-------------------------
 
-<p>Connect with us through DegenHouse for more information or collaboration opportunities.</p>
+*   Unique deployment of smart contracts at scale.
+*   Integration with Ethereum for enhanced security.
+*   Liquid staking for feeless stock trading.
 
-<hr />
 
-<p>This project is not just a submission for the Degen Hack but also a step towards improving the SIRA system from PKO BP. We are excited to lead the way in Poland's financial sector with AssetLink Nexus.</p>
+Proposed changes
+-------
+During the hackathon we identified large scope for contract improvements, during the discovery we started planning an more efficient way to archive business goals for example:
+
+Create offer variant A:
+![Create offer A](createA.jpg "Create offer A")
+
+Approve offer for variant A:
+![Approve offer A](approveA.jpg "Approve offer A")
+
+Contact
+-------
+
+Connect with us through DegenHouse for more information or collaboration opportunities.
+
+* * *
+
+This project is not just a submission for the Degen Hack but also a step towards improving the SIRA system from PKO BP. We are excited to lead the way in Poland's financial sector with AssetLink Nexus.

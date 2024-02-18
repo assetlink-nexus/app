@@ -9,16 +9,16 @@ import { Token } from 'src/app/model/token';
 export class TableComponent {
   @Input() tokens: Token[];
 
-  // tokens = [
-  //   { name: 'TokenPKOBP', amount: 200000000 },
-  //   { name: 'TokenPKOBP', amount: 200000000 },
-  //   { name: 'TokenPKOBP', amount: 200000000 },
-  //   { name: 'TokenPKOBP', amount: 200000000 },
-  //   { name: 'TokenPKOBP', amount: 200000000 },
-  // ];
+  selectedToken: Token;
 
   placeOffer(token: any) {
     console.log('Placing offer for', token);
+  }
+
+  openPlaceOfferModal(token: Token) {
+    console.log('PLACEOFFER');
+    console.log(token);
+    this.selectedToken = token;
   }
 
   openOrderBook(token: any) {

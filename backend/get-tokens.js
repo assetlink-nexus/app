@@ -74,7 +74,7 @@ function authenticateUser(username, password) {
     });
   }
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // Login endpoint
 app.post('/login', async (req, res) => {
