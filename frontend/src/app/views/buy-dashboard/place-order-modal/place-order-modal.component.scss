@@ -1,0 +1,39 @@
+.modal-content {
+    border-radius: 15px;
+  }
+  
+  .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .modal-body {
+    padding-top: 0;
+  }
+  
+  .modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .modal-body .form-label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-body .form-control {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .modal-body .form-select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .modal-footer {
+    border-top: none;
+    justify-content: center;
+  }
