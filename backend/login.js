@@ -48,13 +48,7 @@ app.post('/login', async (req, res) => {
     }
   });
   
-  function authenticateUser(username, password) {
-    // This function should query your database to find a user
-    // that matches the provided username and password
-    // For demonstration, it returns true as if authentication succeeded
-    // Replace this with actual authentication logic against your database
-    return new Promise((resolve) => resolve(true));
-  }
+
   
   app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
